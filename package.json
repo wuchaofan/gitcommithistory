@@ -9,7 +9,6 @@
   "author": "chaofan",
   "license": "ISC",
   "dependencies": {
-    "command-line-args": "^4.0.4",
-    "moment": "^2.18.1"
+    "command-line-args": "^4.0.4"
   }
 }

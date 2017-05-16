@@ -18,12 +18,24 @@ var optionDef = [
         alias: 'e', 
         type: String,
         defaultOption: moment().format()
+    },
+    {
+        name: 'help',
+        alias: 'h',
+        type: Boolean
     }
 ]
 
 function gitlog(){
     var option = commandLineArgs(optionDef)
-    var commandline = "git log "
+    if (option.help){
+        console.log('参数：\n'+
+    '--begin, -b 表示开始时间，例子："2017-05-16"、"2017-05-16 11:12"、"2017-05-16T10:00:37.855Z" \n'+
+    '--end, -e 表示结束时间\n'+
+    '--search, -s 搜索内容')
+        return
+    }
+    var commandline = "git log -n 200 "
     if (option.begin){
         commandline += " --after=\'" + option.begin + "\'"
     }
