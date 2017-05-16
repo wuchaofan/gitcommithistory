@@ -1,6 +1,5 @@
 var exec = require('child_process').exec
 var commandLineArgs = require('command-line-args')
-var moment = require('moment')
 
 var optionDef = [
     {
@@ -17,7 +16,6 @@ var optionDef = [
         name: 'end', //before
         alias: 'e', 
         type: String,
-        defaultOption: moment().format()
     },
     {
         name: 'help',
