@@ -23,7 +23,7 @@ var optionDef = [
 
 function gitlog(){
     var option = commandLineArgs(optionDef)
-    var commandline = 'git log -n 100'
+    var commandline = "git log "
     if (option.begin){
         commandline += " --after=\'" + option.begin + "\'"
     }
@@ -31,9 +31,9 @@ function gitlog(){
         commandline += " --before=\'" + option.end + "\'"
     }
     if (option.search){
-        commandline += ' | grep -B 4 ' + option.search
+        commandline += " --grep=\'"  + option.search + "\'"
     }
-    console.log(commandline)
+    console.log('\x1b[36m%s\x1b[0m', commandline)
     exec(commandline, function(error,stdout, stderr) {
         
         if(error){
