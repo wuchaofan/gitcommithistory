@@ -45,7 +45,7 @@ function gitlog(){
     if (option.search){
         commandline += " --grep=\'"  + option.search + "\'"
     }
-    console.log('\x1b[36m%s\x1b[0m', commandline)
+    // console.log('\x1b[36m%s\x1b[0m', commandline)
     exec(commandline, function(error,stdout, stderr) {
         
         if(error){

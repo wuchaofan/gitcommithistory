@@ -4,7 +4,7 @@
   "description": " view git commit history tool",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node index.js -b '2017-05-16 15:21:04' -e '2017-05-16 15:22'"
   },
   "author": "chaofan",
   "license": "ISC",
